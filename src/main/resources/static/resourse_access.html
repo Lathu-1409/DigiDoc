@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocuVault</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>📂 DocuVault: Manage Your Digital Treasure</h1>
+  </header>
+
+  <main id="app">
+    <!-- Landing Page -->
+    <section id="landing-page" class="page active">
+      <h2>Welcome to DocuVault!</h2>
+      <p>Easily store, search, and retrieve your files with our secure document management solution.</p>
+      <button onclick="navigateTo('register-page')">Create an Account</button>
+      <button onclick="navigateTo('login-page')">Login</button>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register-page" class="page">
+      <h2>Create Your Account</h2>
+      <form id="register-form">
+        <input type="text" id="username" placeholder="Choose a Username" required>
+        <input type="email" id="email" placeholder="Your Email Address" required>
+        <input type="password" id="password" placeholder="Set Your Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+
+    <!-- Login Page -->
+    <section id="login-page" class="page">
+      <h2>Login to DocuVault</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Enter Your Email" required>
+        <input type="password" id="login-password" placeholder="Enter Your Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Choose Action Page -->
+    <section id="choose-action-page" class="page">
+      <h2>What Do You Want To Do Next?</h2>
+      <button onclick="navigateTo('upload-page')">📤 Upload Documents</button>
+      <button onclick="navigateTo('query-page')">🔍 Search & Download Documents</button>
+    </section>
+
+    <!-- Upload Page -->
+    <section id="upload-page" class="page">
+      <h2>Upload Your Files</h2>
+      <form id="upload-form">
+        <input type="text" id="fileName" placeholder="File Name" required>
+        <input type="text" id="subjectName" placeholder="Subject Name" required>
+        <select id="category" required>
+          <option value="">Select Category</option>
+          <option value="NOTES">Notes</option>
+          <option value="QUESTION_PAPER">Question Paper</option>
+          <option value="STUDY_MATERIAL">Study Material</option>
+        </select>
+        <input type="text" id="uploadedBy" placeholder="Uploaded By" required>
+        <input type="file" id="file" accept="application/pdf" required>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <!-- Query Page -->
+    <section id="query-page" class="page">
+      <h2>Search Documents</h2>
+      <form id="query-form">
+        <input type="text" id="queryFileName" placeholder="File Name">
+        <input type="text" id="querySubjectName" placeholder="Subject Name">
+        <select id="queryCategory">
+          <option value="">Select Category</option>
+          <option value="NOTES">Notes</option>
+          <option value="QUESTION_PAPER">Question Papers</option>
+          <option value="STUDY_MATERIAL">Study Materials</option>
+        </select>
+        <input type="text" id="queryUploadedByUsername" placeholder="Uploaded By">
+        <button type="submit">Search</button>
+      </form>
+      <table id="document-table">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject Name</th>
+            <th>Category</th>
+            <th>Uploaded By</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>DocuVault © 2025: Your Digital Archive Simplified</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
