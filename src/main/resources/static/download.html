@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Document - Student Hive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Download Document</h1>
+    <p>Access your academic resources</p>
+  </header>
+  
+  <main>
+    <form id="downloadForm">
+      <div class="form-group">
+        <label for="searchTerm">Search Document</label>
+        <input type="text" id="searchTerm" name="searchTerm" placeholder="Enter document name, subject, or ID" required>
+      </div>
+
+      <div class="form-filters">
+        <div class="form-group">
+          <label for="filterCategory">Category</label>
+          <select id="filterCategory" name="filterCategory">
+            <option value="">All Categories</option>
+            <option value="NOTES">Notes</option>
+            <option value="QUESTION_PAPER">Question Paper</option>
+            <option value="STUDY_MATERIAL">Study Material</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="filterSemester">Semester</label>
+          <select id="filterSemester" name="filterSemester">
+            <option value="">All Semesters</option>
+            <option value="I">Semester I</option>
+            <option value="II">Semester II</option>
+            <option value="III">Semester III</option>
+            <option value="IV">Semester IV</option>
+            <option value="V">Semester V</option>
+            <option value="VI">Semester VI</option>
+            <option value="VII">Semester VII</option>
+            <option value="VIII">Semester VIII</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Search Documents</button>
+    </form>
+
+    <div id="results">
+      <table class="results-table hidden">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject</th>
+            <th>Category</th>
+            <th>Semester</th>
+            <th>Upload Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Results will be dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </main>
+  <script src="js/download.js"></script>
+</body>
+</html>

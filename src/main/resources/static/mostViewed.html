@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Most Viewed Documents</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Most Viewed Documents</h1>
+    <p>Explore the academic resources with the highest views</p>
+  </header>
+  
+  <main>
+    <form id="mostViewedForm" class="most-viewed-form">
+      <div class="form-group">
+        <label for="count">Number of Documents to Display:</label>
+        <input type="number" id="count" name="count" min="1" placeholder="e.g., 10" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Fetch Documents</button>
+    </form>
+
+    <div id="results">
+      <table class="results-table hidden">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject</th>
+            <th>Category</th>
+            <th>Views</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Results will be dynamically populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </main>
+  <script src="js/mostViewed.js"></script>
+</body>
+</html>

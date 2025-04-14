@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Documents</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>View Documents</h1>
+    <p>Search for academic resources</p>
+  </header>
+  <main>
+    <form id="queryForm" class="query-form">
+      <label for="fileName">File Name:</label>
+      <input type="text" id="fileName" name="fileName" placeholder="Enter file name">
+
+      <label for="subjectName">Subject Name:</label>
+      <input type="text" id="subjectName" name="subjectName" placeholder="Enter subject name">
+
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="">Select</option>
+        <option value="NOTES">Notes</option>
+        <option value="QUESTION_PAPER">Question Paper</option>
+        <option value="STUDY_MATERIAL">Study Material</option>
+      </select>
+
+      <label for="uploadedByUsername">Uploaded By:</label>
+      <input type="text" id="uploadedByUsername" name="uploadedByUsername" placeholder="Enter username">
+
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="results-container">
+      <table id="resultsTable" class="results-table">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject Name</th>
+            <th>Category</th>
+            <th>Uploaded By</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTableBody">
+          <!-- Results will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </main>
+  <script src="js/query.js"></script>
+</body>
+</html>

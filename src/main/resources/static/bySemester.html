@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents by Semester</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Documents by Semester</h1>
+    <p>Find academic resources for your selected semester</p>
+  </header>
+  
+  <main>
+    <form id="bySemesterForm" class="by-semester-form">
+      <div class="form-group">
+        <label for="semester">Select Semester:</label>
+        <select id="semester" name="semester" required>
+          <option value="">Choose a semester</option>
+          <option value="I">Semester I</option>
+          <option value="II">Semester II</option>
+          <option value="III">Semester III</option>
+          <option value="IV">Semester IV</option>
+          <option value="V">Semester V</option>
+          <option value="VI">Semester VI</option>
+          <option value="VII">Semester VII</option>
+          <option value="VIII">Semester VIII</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="count">Number of Documents to Display:</label>
+        <input type="number" id="count" name="count" min="1" placeholder="e.g., 5" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Fetch Documents</button>
+    </form>
+
+    <div id="results">
+      <table class="results-table hidden">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject</th>
+            <th>Category</th>
+            <th>Upload Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Results will be dynamically populated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </main>
+  <script src="js/bySemester.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Document - Student Hive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Delete Document</h1>
+    <p>Remove outdated or irrelevant documents</p>
+  </header>
+  
+  <main>
+    <form id="deleteSearchForm" class="delete-search-form">
+      <label for="fileName">File Name:</label>
+      <input type="text" id="fileName" name="fileName" placeholder="Enter file name">
+
+      <label for="subjectName">Subject Name:</label>
+      <input type="text" id="subjectName" name="subjectName" placeholder="Enter subject name">
+
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="">Select</option>
+        <option value="NOTES">Notes</option>
+        <option value="QUESTION_PAPER">Question Paper</option>
+        <option value="STUDY_MATERIAL">Study Material</option>
+      </select>
+
+      <label for="uploadedByUsername">Uploaded By:</label>
+      <input type="text" id="uploadedByUsername" name="uploadedByUsername" placeholder="Enter username">
+
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <div class="results-container">
+      <table id="resultsTable" class="results-table hidden">
+        <thead>
+          <tr>
+            <th>File Name</th>
+            <th>Subject</th>
+            <th>Category</th>
+            <th>Semester</th>
+            <th>Upload Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Results will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </main>
+  <script src="js/delete.js"></script>
+</body>
+</html>
